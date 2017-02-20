@@ -1,0 +1,7 @@
+网站后台：.../admin/
+超级用户：
+    账号：admin
+    密码：Superuser
+
+Infomation_darss： 大爱人士
+Infomation_szqts： 受助群体
