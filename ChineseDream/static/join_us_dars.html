@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %} 
 <head>
 <title>Join</title>
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="images/web_logo.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{% static "images/web_logo.ico" %}">
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- submit form -->
+<script>
+	function info_submit() {
+		var v_name = document.getElementById("input_name").value;
+		var v_email = document.getElementById("input_email").value;
+		var v_number = document.getElementById("input_number").value;
+        var v_message = document.getElementById("input_message").value;
+        v_infomation = "/NAME:" + v_name + ":NAME/" + "/EMAIL:" + v_email + ":EMAIL/" + "/NUMBER:" + v_number + ":NUMBER/" + "/MESSAGE:" + v_message + ":MESSAGE/";
+		$.ajax({
+			type : 'POST',
+			data : {
+                message : v_infomation
+			},
+            success: function (arg){
+				alert("Submit Success!");
+			}
+		});
+	}
+</script>
+<!-- //submit form -->
+
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="{% static "js/jquery-2.1.4.min.js" %}"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}" />
 <!-- //font-awesome icons -->
 <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -63,35 +85,39 @@
 <!-- contact -->
 <div class="contact">
 		<div class="container">
-			<h2 class="w3l_head w3l_head1">加入我们</h2>
+			<h2 class="w3l_head w3l_head1">如果您有能力，请加入我们</h2>
 			<div class="w3_contact_grids">
-				<form action="#" method="post">
+				<!-- form -->
+				<form action="">
+
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="text" id="input-10" name="Name" placeholder="Your Name" required="">
-						<label class="input__label input__label--jiro" for="input-10">
+						<input class="input__field input__field--jiro" type="text" id="input_name" name="Name" placeholder="Your Name" required="">
+						<label class="input__label input__label--jiro" for="input_name">
 							<span class="input__label-content input__label-content--jiro">姓名</span>
 						</label>
 					</span>
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="email" id="input-11" name="Email" placeholder="Your Email Address" required="">
-						<label class="input__label input__label--jiro" for="input-11">
+						<input class="input__field input__field--jiro" type="email" id="input_email" name="Email" placeholder="YourEmailAddress" required="">
+						<label class="input__label input__label--jiro" for="input_email">
 							<span class="input__label-content input__label-content--jiro">邮箱地址</span>
 						</label>
 					</span>
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="text" id="input-12" name="Phone Number" placeholder="Phone Number" required="">
-						<label class="input__label input__label--jiro" for="input-12">
+						<input class="input__field input__field--jiro" type="text" id="input_number" name="PhoneNumber" placeholder="PhoneNumber" required="">
+						<label class="input__label input__label--jiro" for="input_number">
 							<span class="input__label-content input__label-content--jiro">电话号码</span>
 						</label>
 					</span>
 					<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp附加信息</label>
-					<textarea name="Message" placeholder="Message..." required=""></textarea>
-					<input type="submit" value="Submit">
+					<textarea name="Message" placeholder="Message..." required="" id="input_message"></textarea>
+					<input type="submit" value="Submit" onclick="info_submit()">
+
 				</form>
+				<!-- //form -->
 			</div>
 		</div>
 	</div>
-	<script src="js/classie.js"></script>
+	<script src="{% static "js/classie.js" %}"></script>
 	<script>
 			(function() {
 				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -159,7 +185,7 @@
 
 <!-- //footer -->
 <!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="{% static "js/bootstrap.js" %}"></script>
 <!-- //for bootstrap working -->
 </body>
 </html>

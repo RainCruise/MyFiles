@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %} 
 <head>
 <title>About</title>
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="images/web_logo.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{% static "images/web_logo.ico" %}">
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,13 +12,13 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="{% static "js/jquery-2.1.4.min.js" %}"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}" />
 <!-- //font-awesome icons -->
 <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -67,35 +68,7 @@
 			<p><strong>                                                                                                                                            众筹<span lang="EN-US">.</span></strong><strong>众智<span lang="EN-US">.</span></strong><strong>众行<span lang="EN-US">.</span></strong><strong>众享</strong></p>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
-			<p><strong>        编者案：</strong>多年前，中央国家机关青年百村调研，来到乡村，同吃同住同劳动，接地气、访民生、思未来，同样的生活给了我们同样的渴望与梦想……。我们朝思暮想，如何让乡村有更美好的未来，如何为乡村文明的构建贡献力量？如何让&ldquo;乡村之美&rdquo;与&ldquo;城市之爱&rdquo;有个约会，让遇见带来改变！为此尝试筹划设计一个公益计划：我们走近乡村，乡村是不是也可走近城市？以县为单位，推选乡村青少英才代表，来到北京，开展以培养创业创新、厚德务实、爱国与文明的传承为主线的素质拓展活动。经沟通，大爱多感美好，只是觉得有诸多困难，且可不可持续。便先尝试，行胜于言，从<span lang="EN-US">2011</span>年起，第一年<span lang="EN-US">1</span>个省<span lang="EN-US">1</span>个县，第二年<span lang="EN-US">2</span>省<span lang="EN-US">2</span>个县，第三年<span lang="EN-US">5</span>个省<span lang="EN-US">9</span>个县，第四年<span lang="EN-US">12</span>个省<span lang="EN-US">22</span>个县，已累计直接邀请近<span lang="EN-US">1000</span>名乡村青少英才来到京，开展有意义的素质拓展活动。今天是第五年，进一步尝试在现有相对成熟机制和一些爱心支持的基础上，进行该公益的二次创业，追随您的爱，诚征年度轮执公益创业者，携手站在一个新高度，开始新的征程！为此现将有关情况，小结完善和分享交流如下，期待相聚更多的爱、服务更多的（包括您家乡的）乡村青少英才！ </p>
-			<div class="w3l_services_bottom_grids">
-				<div class="col-md-4 w3l_services_bottom_grid">
-					<div class="w3ls_services_bottom_grid hvr-rectangle-out">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div>
-					<h4>lacinia</h4>
-					<p>Proin in mi ut nulla lacinia facilisis. Nullam semper sapien eget viverra iaculis. 
-						Integer quis vestibulum.</p>
-			  </div>
-				<div class="col-md-4 w3l_services_bottom_grid">
-					<div class="w3ls_services_bottom_grid hvr-rectangle-out">
-						<i class="fa fa-building" aria-hidden="true"></i>
-					</div>
-					<h4>facilisis</h4>
-					<p>Proin in mi ut nulla lacinia facilisis. Nullam semper sapien eget viverra iaculis. 
-						Integer quis vestibulum.</p>
-				</div>
-				
-				<div class="col-md-4 w3l_services_bottom_grid">
-					<div class="w3ls_services_bottom_grid hvr-rectangle-out">
-						<i class="fa fa-certificate" aria-hidden="true"></i>
-					</div>
-					<h4>viverra</h4>
-					<p>Proin in mi ut nulla lacinia facilisis. Nullam semper sapien eget viverra iaculis. 
-						Integer quis vestibulum.</p>
-				</div>
-				<div class="clearfix"> </div>
-		  </div>
+			<p><strong>        编者案：</strong>多年前，中央国家机关青年百村调研，来到乡村，同吃同住同劳动，接地气、访民生、思未来，同样的生活给了我们同样的渴望与梦想……。我们朝思暮想，如何让乡村有更美好的未来，如何为乡村文明的构建贡献力量？如何让&ldquo;乡村之美&rdquo;与&ldquo;城市之爱&rdquo;有个约会，让遇见带来改变！为此尝试筹划设计一个公益计划：我们走近乡村，乡村是不是也可走近城市？以县为单位，推选乡村青少英才代表，来到北京，开展以培养创业创新、厚德务实、爱国与文明的传承为主线的素质拓展活动。经沟通，大爱多感美好，只是觉得有诸多困难，且可不可持续。便先尝试，行胜于言，从<span lang="EN-US">2011</span>年起，第一年<span lang="EN-US">1</span>个省<span lang="EN-US">1</span>个县，第二年<span lang="EN-US">2</span>省<span lang="EN-US">2</span>个县，第三年<span lang="EN-US">5</span>个省<span lang="EN-US">9</span>个县，第四年<span lang="EN-US">12</span>个省<span lang="EN-US">22</span>个县，已累计直接邀请近<span lang="EN-US">1000</span>名乡村青少英才来到京，开展有意义的素质拓展活动。今天是第五年，进一步尝试在现有相对成熟机制和一些爱心支持的基础上，进行该公益的二次创业，追随您的爱，诚征年度轮执公益创业者，携手站在一个新高度，开始新的征程！为此现将有关情况，小结完善和分享交流如下，期待相聚更多的爱、服务更多的（包括您家乡的）乡村青少英才！ </p>					 
 		</div>
 	</div>
 	</div>
@@ -212,7 +185,7 @@
 
 <!-- //footer -->
 <!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="{% static "js/bootstrap.js" %}"></script>
 <!-- //for bootstrap working -->
 </body>
 </html>
