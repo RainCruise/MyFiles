@@ -11,27 +11,6 @@
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- submit form -->
-<script>
-	function info_submit() {
-		var v_name = document.getElementById("input_name").value;
-		var v_email = document.getElementById("input_email").value;
-		var v_number = document.getElementById("input_number").value;
-        var v_message = document.getElementById("input_message").value;
-        v_infomation = "/NAME:" + v_name + ":NAME/" + "/EMAIL:" + v_email + ":EMAIL/" + "/NUMBER:" + v_number + ":NUMBER/" + "/MESSAGE:" + v_message + ":MESSAGE/";
-		$.ajax({
-			type : 'POST',
-			data : {
-                message : v_infomation
-			},
-            success: function (arg){
-				alert("Submit Success!");
-			}
-		});
-	}
-</script>
-<!-- //submit form -->
-
 <!-- //for-mobile-apps -->
 <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" media="all" />
 <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
@@ -85,32 +64,32 @@
 <!-- contact -->
 <div class="contact">
 		<div class="container">
-			<h2 class="w3l_head w3l_head1">如果您有困难，请联系我们</h2>
+			<h2 class="w3l_head w3l_head1">如果您有能力，请加入我们</h2>
 			<div class="w3_contact_grids">
 				<!-- form -->
-				<form action="">
+				<form action="../join_us_dars_apply/" method="post">
 
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="text" id="input_name" name="Name" placeholder="Your Name" required="">
+						<input class="input__field input__field--jiro" type="text" id="input_name" name="input_name" placeholder="Your Name" required="">
 						<label class="input__label input__label--jiro" for="input_name">
 							<span class="input__label-content input__label-content--jiro">姓名</span>
 						</label>
 					</span>
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="email" id="input_email" name="Email" placeholder="YourEmailAddress" required="">
+						<input class="input__field input__field--jiro" type="email" id="input_email" name="input_email" placeholder="YourEmailAddress" required="">
 						<label class="input__label input__label--jiro" for="input_email">
 							<span class="input__label-content input__label-content--jiro">邮箱地址</span>
 						</label>
 					</span>
 					<span class="input input--jiro">
-						<input class="input__field input__field--jiro" type="text" id="input_number" name="PhoneNumber" placeholder="PhoneNumber" required="">
+						<input class="input__field input__field--jiro" type="text" id="input_number" name="input_number" placeholder="PhoneNumber" required="">
 						<label class="input__label input__label--jiro" for="input_number">
 							<span class="input__label-content input__label-content--jiro">电话号码</span>
 						</label>
 					</span>
 					<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp附加信息</label>
-					<textarea name="Message" placeholder="Message..." required="" id="input_message"></textarea>
-					<input type="submit" value="Submit" onclick="info_submit()">
+					<textarea name="input_message" placeholder="Message..." required="" id="input_message"></textarea>
+					<input type="submit" value="提交">
 
 				</form>
 				<!-- //form -->
@@ -165,7 +144,7 @@
 			</div>
 			<div class="clearfix"> </div>
 			<h4>欢迎加入乡村·中国梦，成为我们的一员 !</h4>
-			<div class="mo">s
+			<div class="mo">
 				<a href="../index.html">主页</a>
 			</div>
 		</div>
