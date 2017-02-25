@@ -21,7 +21,7 @@ def join_us_dars_apply(request):
     number = request.POST['input_number']
     message = request.POST['input_message']
     Infomation_dars.objects.create(name=name, eamil_address=eamil_address, number=number, message_content=message)
-    return render(request, 'Web/join_us_dars.html')
+    return render(request, 'Web/success.html')
 
 def join_us_szqt(request):
     return render(request, 'Web/join_us_szqt.html')
@@ -32,4 +32,4 @@ def join_us_szqt_apply(request):
     number = request.POST['input_number']
     message = request.POST['input_message']
     Infomation_szqt.objects.create(name=name, eamil_address=eamil_address, number=number, message_content=message)
-    return render(request, 'Web/join_us_szqt.html')
+    return render(request, 'Web/success.html')
