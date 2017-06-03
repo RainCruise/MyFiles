@@ -1,0 +1,37 @@
+body {TEXT-ALIGN: center; width:800px}
+
+.center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
+.left { MARGIN-LEFT=50px;}
+.title { font-size:medium;}
+.doc_item { list-style:none;}
+.content{ font-size:small;}
+cite{ font-size:small; font-style:normal; color:#008000;}
+
+.logo {MARGIN-TOP:100px; MARGIN-LEFT:525px; width:300px; height:200px;}
+#query { MARGIN-LEFT:416px; width:500px;  font-size:medium;}
+#search {MARGIN-LEFT:550px; width:130px; height:50px; font-size:150%; font-weight:bold;}
+
+
+#pageBar { padding: 0px}
+#pageBar span{ display: block;}
+#pageBar a,#pageBar strong {
+	display: inline-block;
+	text-align: center;
+	background: none repeat scroll 0 0 white;
+	text-decoration: none;
+	width:32px;
+}
+.fk { width:15px; height:22px}
+.fkup {opacity:0.50;margin-top: 0px;border: 0px #FFFFFF;}
+.fkdown {opacity:0.50;margin-top: 0px;border: 0px #FFFFFF;}
+.fkcur {margin-top:4px}
+.pc {border: 1px solid #E7ECF0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    text-align: center;}
+
+.result_set{ margin-left: 390px; text-align: center; width:600;}
+ul { margin-left:-40px;}
+em { color: #FF0000;font-style:normal;}
+#el {margin-top: 50px;MARGIN-RIGHT: auto; MARGIN-LEFT: auto;}
