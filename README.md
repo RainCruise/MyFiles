@@ -1,2 +1,2 @@
 # MyFiles
-Use this repository to Backu files.
+Use this repository to Backup files.
