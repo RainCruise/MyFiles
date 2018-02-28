@@ -32,26 +32,6 @@
       "enabled_kcptun" : false,
       "server_port" : 30269,
       "remarks_base64" : ""
-    },
-    {
-      "enable" : true,
-      "password" : "oldy-okinawa-come-migrate",
-      "method" : "aes-256-cfb",
-      "remarks" : "JPY",
-      "server" : "45.77.23.112",
-      "kcptun" : {
-        "nocomp" : false,
-        "key" : "it's a secrect",
-        "crypt" : "aes",
-        "datashard" : 10,
-        "mtu" : 1350,
-        "mode" : "fast",
-        "parityshard" : 3,
-        "arguments" : ""
-      },
-      "enabled_kcptun" : false,
-      "server_port" : 1984,
-      "remarks_base64" : "SlBZ"
     }
   ],
   "proxyPort" : 0,
